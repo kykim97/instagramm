@@ -2,11 +2,11 @@
 
     <v-card outlined>
         <v-card-title>
-            Date
+            Comment
         </v-card-title>
 
         <v-card-text>
-            <Date label="Date" v-model="value.date" :editMode="editMode"/>
+            <String label="Comment" v-model="value.comment" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions v-if="inList">
@@ -18,7 +18,7 @@
 <script>
 
     export default {
-        name: 'Date',
+        name: 'Comment',
         components:{},
         props: {
             value: [Object, String, Number, Boolean, Array],
@@ -34,12 +34,12 @@
             if(!Object.values(this.value)[0]) {
                 this.$emit('input', {});
                 this.newValue = {
-                    'date': '',
+                    'comment': '',
                 }
             }
             if(typeof this.value === 'object') {
-                if(!('date' in this.value)) {
-                    this.value.date = '2023-06-28';
+                if(!('comment' in this.value)) {
+                    this.value.comment = '';
                 }
             }
         },

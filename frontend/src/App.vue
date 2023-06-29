@@ -19,7 +19,7 @@
                         >
                             <div style="line-height:100%;">≡</div>
                         </v-app-bar-nav-icon>
-                        instagramm
+                        untitled
                     </span>
                 </v-toolbar-title>
                 <span v-if="urlPath!=null" 
@@ -138,4 +138,7 @@ export default {
 };
 </script>
 <style>
+.v-application {
+    background-color:  !important;
+  }
 </style>

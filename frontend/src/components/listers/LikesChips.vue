@@ -4,7 +4,7 @@
             <v-list-group v-model="isExpansion">
                 <template v-slot:activator>
                     <v-list-item-content>
-                        <v-list-item-title>User</v-list-item-title>
+                        <v-list-item-title>Likes</v-list-item-title>
                     </v-list-item-content>
                 </template>
             
@@ -12,12 +12,7 @@
                     <v-list-item-content>
                         <v-list-item-title>Message {{idx+1}}</v-list-item-title>
                         <v-list-item-subtitle>
-                            UserId :  {{item.userId }} <br>
-                            Password :  {{item.password }} <br>
-                            Name :  {{item.name }} <br>
-                            Email :  {{item.email }} <br>
-                            Address :  {{item.address }} <br>
-                            Phone :  {{item.phone }} <br>
+                            Liked :  {{item.liked }} <br>
                         </v-list-item-subtitle>
                     </v-list-item-content>
                     <v-list-item-action v-if="editMode">
@@ -29,7 +24,7 @@
             </v-list-group>
         </v-list>
 
-        <User v-if="editMode && tick" offline :isNew="true" :inList="true"
+        <Likes v-if="editMode && tick" offline :isNew="true" :inList="true"
                 :editMode="editMode" v-model="newValue" @add="append">
             <template slot="actions">
                 <v-spacer></v-spacer>
@@ -59,17 +54,17 @@
                     Delete
                 </v-btn>
             </template>
-        </User>
+        </Likes>
     </div>
 </template>
 
 <script>
-    import User from '../User.vue';
+    import Likes from '../Likes.vue';
 
     export default {
-        name: 'UserManager',
+        name: 'LikesManager',
         components: {
-            User
+            Likes
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

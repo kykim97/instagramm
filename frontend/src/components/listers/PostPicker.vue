@@ -15,22 +15,19 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                User :  {{item.user }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 Photo :  {{item.photo }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Date :  {{item.date }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                Like :  {{item.like }}
+                                Likes :  {{item.likes }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Tag :  {{item.tag }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Comment :  {{item.comment }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                User :  {{item.user }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -83,8 +80,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
-                    
                     
                     
                     

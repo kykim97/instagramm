@@ -5,14 +5,11 @@
         </v-card-title>
 
         <v-card-text>
-            <User offline label="User" v-model="item.user" :editMode="false" @change="change" />
             <Photo offline label="Photo" v-model="item.photo" :editMode="false" @change="change" />
-            <div>
-                <Date label="Date" v-model="item.date" :editMode="editMode" @change="change" />
-            </div>
-            <Likes offline label="Like" v-model="item.like" :editMode="false" :key="false" @change="change" />
+            <Likes offline label="Likes" v-model="item.likes" :editMode="false" :key="false" @change="change" />
             <Tags offline label="Tag" v-model="item.tag" :editMode="false" :key="false" @change="change" />
             <Comment offline label="Comment" v-model="item.comment" :editMode="false" :key="false" @change="change" />
+            <User offline label="User" v-model="item.user" :editMode="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

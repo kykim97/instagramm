@@ -1,8 +1,8 @@
-package instagramm.common;
+package untitled.common;
 
-import instagramm.PostApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import untitled.PostApplication;
 
 @CucumberContextConfiguration
 @SpringBootTest(classes = { PostApplication.class })

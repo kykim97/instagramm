@@ -1,4 +1,4 @@
-package instagramm.domain;
+package untitled.domain;
 
 import java.util.Date;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.beans.BeanUtils;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Date {
+public class Comment {
 
-    private Date date;
+    private String comment;
 }
