@@ -1,21 +1,20 @@
-package instagramm.domain;
+package untitled.domain;
 
-import instagramm.domain.*;
-import instagramm.infra.AbstractEvent;
 import java.util.*;
 import lombok.*;
+import untitled.domain.*;
+import untitled.infra.AbstractEvent;
 
 @Data
 @ToString
 public class Posted extends AbstractEvent {
 
     private Long id;
-    private User user;
     private Photo photo;
-    private Date date;
-    private Likes like;
+    private Likes likes;
     private Tags tag;
     private Comment comment;
+    private User user;
 
     public Posted(Post aggregate) {
         super(aggregate);

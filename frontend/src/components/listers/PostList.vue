@@ -15,17 +15,15 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ User :  {{data.user }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Photo :  {{data.photo }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Date :  {{data.date }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Like :  {{data.like }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Likes :  {{data.likes }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Tag :  {{data.tag }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Comment :  {{data.comment }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ User :  {{data.user }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -107,12 +105,11 @@
             this.values = temp.data._embedded.posts;
             
             this.newValue = {
-                'user': {},
                 'photo': {},
-                'date': '2023-06-28',
-                'like': {},
+                'likes': {},
                 'tag': {},
                 'comment': {},
+                'user': {},
             }
         },
         methods: {

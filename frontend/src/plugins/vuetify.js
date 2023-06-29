@@ -8,8 +8,16 @@ export default new Vuetify({
         light: true,
         themes: {
             light: {
-                primary: ''
-            }
-        }
-    }
+                surface:'',
+                primary: '',
+                'primary-darken-1': '',
+                secondary: '',
+                'secondary-darken-1': '',
+                info: '',
+                error: '',
+                warning: '',
+                success: '',
+            },
+        },
+    },
 });

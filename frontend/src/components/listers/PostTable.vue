@@ -67,12 +67,11 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "user", value: "user" },
                     { text: "photo", value: "photo" },
-                    { text: "date", value: "date" },
-                    { text: "like", value: "like" },
+                    { text: "likes", value: "likes" },
                     { text: "tag", value: "tag" },
                     { text: "comment", value: "comment" },
+                    { text: "user", value: "user" },
                 ],
             post : [],
             newValue: {},
@@ -90,12 +89,11 @@
             this.values = temp.data._embedded.posts;
 
             this.newValue = {
-                'user': {},
                 'photo': {},
-                'date': '2023-06-28',
-                'like': {},
+                'likes': {},
                 'tag': {},
                 'comment': {},
+                'user': {},
             }
         },
         methods: {

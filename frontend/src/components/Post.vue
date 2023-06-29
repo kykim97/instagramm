@@ -17,12 +17,11 @@
         </v-card-title >
 
         <v-card-text>
-            <User offline label="User" v-model="value.user" :editMode="editMode" @change="change"/>
             <Photo offline label="Photo" v-model="value.photo" :editMode="editMode" @change="change"/>
-            <Date label="Date" v-model="value.date" :editMode="editMode"/>
-            <Likes offline label="Like" v-model="value.like" :editMode="editMode" @change="change"/>
+            <Likes offline label="Likes" v-model="value.likes" :editMode="editMode" @change="change"/>
             <Tags offline label="Tag" v-model="value.tag" :editMode="editMode" @change="change"/>
             <Comment offline label="Comment" v-model="value.comment" :editMode="editMode" @change="change"/>
+            <User offline label="User" v-model="value.user" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -82,14 +81,14 @@
 <script>
     const axios = require('axios').default;
 
-    import User from './vo/User.vue';
     import Photo from './vo/Photo.vue';
+    import User from './vo/User.vue';
 
     export default {
         name: 'Post',
         components:{
-            User,
             Photo,
+            User,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

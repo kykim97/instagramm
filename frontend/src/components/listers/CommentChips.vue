@@ -4,7 +4,7 @@
             <v-list-group v-model="isExpansion">
                 <template v-slot:activator>
                     <v-list-item-content>
-                        <v-list-item-title>Date</v-list-item-title>
+                        <v-list-item-title>Comment</v-list-item-title>
                     </v-list-item-content>
                 </template>
             
@@ -12,7 +12,7 @@
                     <v-list-item-content>
                         <v-list-item-title>Message {{idx+1}}</v-list-item-title>
                         <v-list-item-subtitle>
-                            Date :  {{item.date }} <br>
+                            Comment :  {{item.comment }} <br>
                         </v-list-item-subtitle>
                     </v-list-item-content>
                     <v-list-item-action v-if="editMode">
@@ -24,7 +24,7 @@
             </v-list-group>
         </v-list>
 
-        <Date v-if="editMode && tick" offline :isNew="true" :inList="true"
+        <Comment v-if="editMode && tick" offline :isNew="true" :inList="true"
                 :editMode="editMode" v-model="newValue" @add="append">
             <template slot="actions">
                 <v-spacer></v-spacer>
@@ -54,17 +54,17 @@
                     Delete
                 </v-btn>
             </template>
-        </Date>
+        </Comment>
     </div>
 </template>
 
 <script>
-    import Date from '../Date.vue';
+    import Comment from '../Comment.vue';
 
     export default {
-        name: 'DateManager',
+        name: 'CommentManager',
         components: {
-            Date
+            Comment
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

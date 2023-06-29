@@ -32,7 +32,7 @@ mvn spring-boot:run
 ## Test by API
 - post
 ```
- http :8088/posts id="id" user="user" photo="photo" date="date" like="like" tag="tag" comment="comment" 
+ http :8088/posts id="id" photo="photo" likes="likes" tag="tag" comment="comment" user="user" 
 ```
 
 

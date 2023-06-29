@@ -1,11 +1,11 @@
-package instagramm.domain;
+package untitled.domain;
 
-import instagramm.PostApplication;
-import instagramm.domain.Posted;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
+import untitled.PostApplication;
+import untitled.domain.Posted;
 
 @Entity
 @Table(name = "Post_table")
@@ -17,25 +17,23 @@ public class Post {
     private Long id;
 
     @Embedded
-    private User user;
-
-    @Embedded
     private Photo photo;
 
-    @AttributeOverride(
-        name = "date",
-        column = @Column(name = "dateDate", nullable = true)
-    )
-    private Date date;
-
     @Embedded
-    private Likes like;
+    private Likes likes;
 
     @Embedded
     private Tags tag;
 
     @Embedded
+    @AttributeOverride(
+        name = "comment",
+        column = @Column(name = "commentComment", nullable = true)
+    )
     private Comment comment;
+
+    @Embedded
+    private User user;
 
     @PostPersist
     public void onPostPersist() {

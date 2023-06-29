@@ -68,12 +68,11 @@
             me.values = temp.data._embedded.posts;
             
             me.newValue = {
-                'user': {},
                 'photo': {},
-                'date': '2023-06-28',
-                'like': {},
+                'likes': {},
                 'tag': {},
                 'comment': {},
+                'user': {},
             }
         },
         methods:{
